@@ -11,6 +11,41 @@
 In this lesson, we will learn how to change an object's state by using
 Java's dot operator `.` to access a field through an object reference. 
 
+## Setup
+
+Let's create a new project and then add the `Dog` class:
+
+1. Create a new Maven Java project named "object_state".       
+
+   ![new java project](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/new_java_project.png)
+
+2. Right-click on the Java folder and create a new Java class named `Dog`.     
+
+   ![new dog class](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/project_structure_newclass.png)
+
+
+3. Edit the `Dog` class and add the following code:     
+
+   ```java
+   public class Dog {
+       
+       String name;
+       String breed;
+       int age;
+       boolean waggingTail;
+       
+       public static void main(String[] args) {
+   
+          // create 2 Dog instances
+          Dog bigDog = new Dog();
+          Dog smallDog = new Dog();
+          
+       }
+       
+   }
+   ```
+
+
 ## Dot Notation
 
 Let's continue with the `Dog` class and the `main` method that creates two `Dog` instances:
