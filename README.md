@@ -13,37 +13,36 @@ Java's dot operator `.` to access a field through an object reference.
 
 ## Setup
 
-Let's create a new project and then add the `Dog` class:
+Let's create a new project and then add the `Dog` class.
 
-1. Create a new Maven Java project named "object_state".       
+Create a new Maven Java project named "object_state".
+  
+![new java project](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/new_java_project.png)
 
-   ![new java project](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/new_java_project.png)
+Right-click on the Java folder and create a new Java class named `Dog`.
 
-2. Right-click on the Java folder and create a new Java class named `Dog`.     
+![new dog class](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/project_structure_newclass.png)
 
-   ![new dog class](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/project_structure_newclass.png)
+Edit the `Dog` class and add the following code:     
 
+```java
+public class Dog {
+    
+    String name;
+    String breed;
+    int age;
+    boolean waggingTail;
+    
+    public static void main(String[] args) {
 
-3. Edit the `Dog` class and add the following code:     
-
-   ```java
-   public class Dog {
+       // create 2 Dog instances
+       Dog bigDog = new Dog();
+       Dog smallDog = new Dog();
        
-       String name;
-       String breed;
-       int age;
-       boolean waggingTail;
-       
-       public static void main(String[] args) {
-   
-          // create 2 Dog instances
-          Dog bigDog = new Dog();
-          Dog smallDog = new Dog();
-          
-       }
-       
-   }
-   ```
+    }
+    
+}
+```
 
 
 ## Dot Notation
@@ -143,25 +142,25 @@ line of code is executed.
 Let's step through the `main` method using the IntelliJ debugger and the `Java Visualizer` plugin, which
 will let us see what the objects look like in memory.
 
-1. Set a breakpoint on the first line of executable code in the `main` method (i.e. not a comment or blank line),
-   then click the "debug" icon to launch the debugger.   Your line number may differ depending on comments and blank lines.  
-   
-   ![dog breakpoint](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/set_breakpoint.png)
+Set a breakpoint on the first line of executable code in the `main` method (i.e. not a comment or blank line),
+then click the "debug" icon to launch the debugger.   Your line number may differ depending on comments and blank lines.
 
-2. Select the "Java Visualizer" tab in the debug window.
-   Notice the call stack shows the `main` method has stopped at the breakpoint (your line number may be different).    
+![dog breakpoint](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/set_breakpoint.png)
+
+Select the "Java Visualizer" tab in the debug window.
+Notice the call stack shows the `main` method has stopped at the breakpoint (your line number may be different).    
  
-   ![java visualizer tab](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/breakpoint_reached.png)
+![java visualizer tab](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/breakpoint_reached.png)
 
-3. Press the "Step Over" icon to execute each line of code in the `main` method.  
+Press the "Step Over" icon to execute each line of code in the `main` method.
 
-   ![step over](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/stepover_icon.png)
+![step over](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-oop-fundamentals/stepover_icon.png)
 
-   Continue stepping through the code one line at a time and notice how the object state is updated.
+Continue stepping through the code one line at a time and notice how the object state is updated.
    
-   NOTE: IntelliJ's Java Visualizer lays out the objects in a row, and unfortunately the
-   arrows cross over the objects. If you want a column layout, use the browser based
-   Java visualizer at [https://pythontutor.com/java.html](https://pythontutor.com/java.html#mode=edit).
+NOTE: IntelliJ's Java Visualizer lays out the objects in a row, and unfortunately the
+arrows cross over the objects. If you want a column layout, use the browser based
+Java visualizer at [https://pythontutor.com/java.html](https://pythontutor.com/java.html#mode=edit).
 
 
 | Code                                           | Java Visualizer                                                                                                                                                                      |
